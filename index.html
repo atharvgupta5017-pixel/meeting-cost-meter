@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meeting Cost Meter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>💰 Meeting Cost Meter</h1>
+            <p>Know the real cost of every meeting.</p>
+        </div>
+
+        <button id="themeBtn" class="theme-btn">
+            🌙 Dark Mode
+        </button>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Employee Section -->
+        <section class="card">
+
+            <h2>👥 Meeting Participants</h2>
+
+            <div class="employee-form">
+
+                <input
+                    type="text"
+                    id="employeeName"
+                    placeholder="Employee name"
+                >
+
+                <input
+                    type="number"
+                    id="employeeSalary"
+                    placeholder="Monthly salary (₹)"
+                >
+
+                <button id="addEmployeeBtn">
+                    + Add Employee
+                </button>
+
+            </div>
+
+
+            <div id="employeeList" class="employee-list">
+                <!-- Employees will appear here -->
+            </div>
+
+        </section>
+
+
+        <!-- Meeting Settings -->
+        <section class="card">
+
+            <h2>⏱️ Meeting Settings</h2>
+
+            <div class="settings">
+
+                <div>
+                    <label>Meeting Duration (minutes)</label>
+
+                    <input
+                        type="number"
+                        id="meetingDuration"
+                        placeholder="Example: 60"
+                        min="1"
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="buttons">
+
+                <button id="startBtn" class="start-btn">
+                    ▶ Start Meeting
+                </button>
+
+                <button id="stopBtn" class="stop-btn">
+                    ⏹ Stop Meeting
+                </button>
+
+                <button id="resetBtn" class="reset-btn">
+                    🧹 Reset
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Live Cost -->
+        <section class="live-card">
+
+            <p>Current Meeting Cost</p>
+
+            <h2 id="liveCost">₹0.00</h2>
+
+            <p id="meetingStatus">
+                Meeting not started
+            </p>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <span>👥</span>
+
+                <h3 id="totalEmployees">
+                    0
+                </h3>
+
+                <p>Employees</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>💰</span>
+
+                <h3 id="costPerMinute">
+                    ₹0.00
+                </h3>
+
+                <p>Cost / Minute</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>⏱️</span>
+
+                <h3 id="elapsedTime">
+                    0:00
+                </h3>
+
+                <p>Elapsed Time</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>💵</span>
+
+                <h3 id="totalCost">
+                    ₹0.00
+                </h3>
+
+                <p>Total Cost</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Meeting Summary -->
+        <section class="card">
+
+            <h2>📊 Meeting Summary</h2>
+
+            <div id="summary">
+
+                <p>
+                    Add employees and start the meeting to see the summary.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Cost Chart -->
+        <section class="card">
+
+            <h2>📈 Employee Cost Chart</h2>
+
+            <div id="chart">
+
+                <p>
+                    Add employees to see the cost distribution.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Export -->
+        <section class="card export-section">
+
+            <h2>📥 Export Report</h2>
+
+            <p>
+                Download a simple text report of your meeting.
+            </p>
+
+            <button id="exportBtn">
+                📄 Download Meeting Report
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Meeting Cost Meter © 2026
+        </p>
+
+        <p>
+            Built with HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
